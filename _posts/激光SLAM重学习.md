@@ -1,5 +1,26 @@
 # 激光SLAM重学习
 
+## 传感器
+
+### URG-04LX
+
+波特率115200，可设置
+
+[ROS使用方法](https://blog.csdn.net/zzzztttttffffff/article/details/109259170)
+
+```
+安装
+sudo apt-get install ros-melodic-urg-node
+
+查询连接端口
+rosrun urg_node getID /dev/ttyACM0
+
+运行
+rosrun urg_node urg_node
+
+rviz -f laser
+```
+
 ## 传感器介绍
 
 1. 测距原理
