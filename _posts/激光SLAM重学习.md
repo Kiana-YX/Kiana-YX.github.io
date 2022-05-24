@@ -37,3 +37,16 @@ rviz -f laser
     | 价格便宜                 | 价格昂贵           |
     | 易受干扰                 | 抗干扰能力强     |
     | 一般室内使用           | 室内室外皆可     |
+
+## 水图片
+
+![](https://pictures-kiana.oss-cn-beijing.aliyuncs.com/img/202205241040758.png)
+
+![](https://pictures-kiana.oss-cn-beijing.aliyuncs.com/img/202205241042175.png)
+
+## car
+
+$ sudo apt-get install stow
+$ sudo chmod +x ~/carto_ws/src/cartographer/scripts/install_abseil.sh
+$ cd ~/carto_ws/src/cartographer/scripts
+$ ./install_abseil.sh
