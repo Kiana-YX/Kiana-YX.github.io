@@ -22,17 +22,18 @@ tags:
 
    按F10可以选择启动设备
 
-2. 蓝牙键盘
+3. 蓝牙键盘
 
    1. ubuntun系统下将蓝牙键盘与系统连接好
 
    2. 获取ubuntun下的蓝牙配对linkkey
 
-      ![命令行](https://gitee.com/Kiana-yx/pictures/raw/master/img/image-20211115100413787.png)
+      ![命令行](../img-post/img/image-20211115100413787.png)
+
       
    3. **管理员**打开cmd
       
-      ![image-20211128163253551](https://gitee.com/Kiana-yx/pictures/raw/master/img/win%E9%85%8D%E7%BD%AE%E8%93%9D%E7%89%99%E9%94%AE%E7%9B%98.png)
+      ![image-20211128163253551](../img-post/img/win%E9%85%8D%E7%BD%AE%E8%93%9D%E7%89%99%E9%94%AE%E7%9B%98.png)
       
    4. 修改
       
@@ -41,25 +42,25 @@ tags:
       参考链接：
       [win10 ubuntu16 双系统共用蓝牙鼠标](https://blog.csdn.net/10km/article/details/61201268?utm_medium=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromMachineLearnPai2%7Edefault-3.control&depth_1-utm_source=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromMachineLearnPai2%7Edefault-3.control)
    
-3. 启动项管理
+4. 启动项管理
 
    [Windows](https://blog.csdn.net/qq459080123/article/details/81392060)
    
    [Ubuntun](https://blog.csdn.net/qq_27278957/article/details/100099169?spm=1001.2101.3001.6650.2&utm_medium=distribute.pc_relevant.none-task-blog-2%7Edefault%7ELandingCtr%7Edefault-2.queryctrv2&depth_1-utm_source=distribute.pc_relevant.none-task-blog-2%7Edefault%7ELandingCtr%7Edefault-2.queryctrv2&utm_relevant_index=5) `gnome-session-properties`
 
-4. 小技巧
+5. 小技巧
 
    [解决pip下载过慢的问题](https://blog.csdn.net/SampsonTse/article/details/103997667)
    
-5. ubuntun扩容
+6. ubuntun扩容
 
    [通过GParted](https://zhuanlan.zhihu.com/p/422981369)
 
    [Win10方案](https://www.diskgenius.cn/)
    
-6. [QQ、微信](https://www.cnblogs.com/voidint07/p/14097092.html)
+7. [QQ、微信](https://www.cnblogs.com/voidint07/p/14097092.html)
 
-7. c
+8. c
 
    ```
    $ sudo apt-get install ros-noetic-rqt
