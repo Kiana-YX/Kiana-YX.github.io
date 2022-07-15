@@ -44,9 +44,13 @@ rviz -f laser
 
 ![](https://pictures-kiana.oss-cn-beijing.aliyuncs.com/img/202205241042175.png)
 
-## car
+## 激光SLAM
 
-$ sudo apt-get install stow
-$ sudo chmod +x ~/carto_ws/src/cartographer/scripts/install_abseil.sh
-$ cd ~/carto_ws/src/cartographer/scripts
-$ ./install_abseil.sh
+### 入门
+
+1. [里程计标定](https://blog.csdn.net/weixin_45929038/article/details/122638114)
+
+    ![](https://pictures-kiana.oss-cn-beijing.aliyuncs.com/img/202207151002119.png)
+
+    直接相减求位姿差是在世界坐标系中的结果，而激光雷达的scan-matching的位姿差需要以上一时刻的位姿作为参考系，因此需要将直接相减的结果做一次旋转。
+
