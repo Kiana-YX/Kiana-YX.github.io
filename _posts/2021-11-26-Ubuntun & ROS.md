@@ -166,7 +166,7 @@ sudo chmod -R 777 /usr/share/sangfor
    
 5. 创建功能包
 
-   ![](https://gitee.com/Kiana-yx/pictures/raw/master/img/202202141058546.png)
+   ![](../img-post/img/202202141058546.png)
 
    ```
    catkin_create_pkg tim_pkg std_msgs rospy roscpp
@@ -177,7 +177,7 @@ sudo chmod -R 777 /usr/share/sangfor
 
 为了让所有开发者围绕相同的坐标系开发软件，ros中制定了标准的坐标系定义方案。此时与激光雷达用户手册上有所不同
 
-![](https://gitee.com/Kiana-yx/pictures/raw/master/img/202201032023757.png)
+![](../img-post/img/202201032023757.png)
 
 ### ROS Nodelet 
 
