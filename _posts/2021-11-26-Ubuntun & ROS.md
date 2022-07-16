@@ -28,12 +28,12 @@ tags:
 
    2. 获取ubuntun下的蓝牙配对linkkey
 
-      ![命令行](../img-post/img/image-20211115100413787.png)
+      ![命令行](https://pictures-kiana.oss-cn-beijing.aliyuncs.com/img/image-20211115100413787.png)
 
       
    3. **管理员**打开cmd
       
-      ![image-20211128163253551](../img-post/img/win%E9%85%8D%E7%BD%AE%E8%93%9D%E7%89%99%E9%94%AE%E7%9B%98.png)
+      ![image-20211128163253551](https://pictures-kiana.oss-cn-beijing.aliyuncs.com/img/win%E9%85%8D%E7%BD%AE%E8%93%9D%E7%89%99%E9%94%AE%E7%9B%98.png)
       
    4. 修改
       
@@ -166,7 +166,7 @@ sudo chmod -R 777 /usr/share/sangfor
    
 5. 创建功能包
 
-   ![](../img-post/img/202202141058546.png)
+   ![](https://pictures-kiana.oss-cn-beijing.aliyuncs.com/img/202202141058546.png)
 
    ```
    catkin_create_pkg tim_pkg std_msgs rospy roscpp
@@ -177,7 +177,7 @@ sudo chmod -R 777 /usr/share/sangfor
 
 为了让所有开发者围绕相同的坐标系开发软件，ros中制定了标准的坐标系定义方案。此时与激光雷达用户手册上有所不同
 
-![](../img-post/img/202201032023757.png)
+![](https://pictures-kiana.oss-cn-beijing.aliyuncs.com/img/202201032023757.png)
 
 ### ROS Nodelet 
 
