@@ -6,23 +6,43 @@
 
 波特率115200，可设置
 
-[ROS使用方法](https://blog.csdn.net/zzzztttttffffff/article/details/109259170)
+1. [ROS使用方法](https://blog.csdn.net/zzzztttttffffff/article/details/109259170)
 
-```
-安装
-sudo apt-get install ros-melodic-urg-node
+    ```
+    安装
+    sudo apt-get install ros-melodic-urg-node
 
-查询连接端口
-rosrun urg_node getID /dev/ttyACM0
+    查询连接端口
+    rosrun urg_node getID /dev/ttyACM0
 
-给串口权限
-sudo chmod 777 /dev/ttyACM0
+    给串口权限
+    sudo chmod 777 /dev/ttyACM0
 
-运行
-rosrun urg_node urg_node
+    永久权限
+    sudo usermod -aG dialout [user_name]
+    or:
+    sudo usermod -a -G dialout [user_name]
 
-rviz -f laser
-```
+    运行
+    rosrun urg_node urg_node
+
+    rviz -f laser
+    ```
+
+2. RO2踩坑日记
+
+    1. 驱动代码urg_node.cpp修改配置/dev/ttyACM0
+
+    2. 配置角度时以正前方为0
+   
+        ```
+        angle_min_(-3.14159267/3*2),
+        angle_max_(3.14159267/3*2),
+        ```  
+
+        分辨率：360/1024 
+
+        240 / (360/1024) = 683 个点 
 
 ## 传感器介绍
 
@@ -41,11 +61,6 @@ rviz -f laser
     | 易受干扰                 | 抗干扰能力强     |
     | 一般室内使用           | 室内室外皆可     |
 
-## 水图片
-
-![](https://pictures-kiana.oss-cn-beijing.aliyuncs.com/img/202205241040758.png)
-
-![](https://pictures-kiana.oss-cn-beijing.aliyuncs.com/img/202205241042175.png)
 
 ## 激光SLAM
 
