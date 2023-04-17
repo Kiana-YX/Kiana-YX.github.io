@@ -74,6 +74,8 @@
     转换后维度 = dd + (mm.mmmmm)/60
     转换后精度 = ddd + (mm.mmmmm)/60
 
+    <div align=center>     <img src="https://pictures-kiana.oss-cn-beijing.aliyuncs.com/img/20230409165841.png" width = "600" alt="20230409165841"/>    </div>
+
 3. [gps_common](https://codeleading.com/article/94243225958/)
 
     [wiki](https://github.com/swri-robotics/gps_umd/tree/ros2-devel)
@@ -87,6 +89,51 @@
         [谷歌earth](https://earth.google.com/web/search/114.35779067E+30.54709515N/@30.54729759,114.35855255,23.60485661a,535.66431302d,35y,-0.00797182h,44.99663574t,0r/data=Cl4aNBIuGW_MV24OjD5AIQfU9grmllxAKhoxMTQuMzU3NzkwNjdFIDMwLjU0NzA5NTE1ThgCIAEiJgokCeEvcxfDjD5AEXUkxQjViz5AGTWwExIjl1xAIVSPf02kllxA)
     
         ![](https://pictures-kiana.oss-cn-beijing.aliyuncs.com/img/202209261123847.png)
+
+5. GPS数据处理
+   
+   1. [读取与写入](https://blog.csdn.net/y18771025420/article/details/105884911)
+
+    ```c++
+    #include <iostream>
+    #include<fstream>
+
+    //using namespace std;
+    using std::ofstream;
+
+    int main()
+    {
+        ofstream res("./gps.txt", std::ios::app);
+        int i = 100;
+
+        while (i--) {
+            
+            res << 3 << " " << 2 << " " << 1 << std::endl;
+        }
+
+        res.close();
+    }
+    ```
+   2. 数据分析
+    ```matlab
+    clc;clear;
+    gps_array = load('F:\Administrator\Desktop\gps.txt');  % 这里的load()参数是txt文件的地址，test_array就是所读取的数据
+    x = gps_array(:,1);
+    y = gps_array(:,2);
+
+    sz = 4;
+    c = linspace(1,10,length(x));   % 绘制颜色
+    
+    scatter(x, y ,sz ,c ,'filled');  
+
+    axis("equal")   % 坐标轴等比例
+    ```
+
+    下载曲线拟合器 curve fitting
+
+    命令行输入cftool
+
+### 卡尔曼滤波
 
 ### 原理
 
