@@ -52,6 +52,8 @@
 
 3. [DRTK配置](https://wiki.blicube.com/grtk/zh/%E5%B8%B8%E7%94%A8%E9%85%8D%E7%BD%AE%E5%91%BD%E4%BB%A4/#mode)
    
+   <div align=center>     <img src="https://pictures-kiana.oss-cn-beijing.aliyuncs.com/img/20231019122321.png" width = "400" alt="20231019122321"/>    </div>  
+   
    修改DRTK基站与移动站配置
 
    ```
@@ -60,12 +62,8 @@
    GPRMC COM2 0.1  
    GPHDT COM2 0.1  
    KSXT COM2 0.1
-   SAVECONFIG
    (PS：此处需要使用CR&LF换行)
-   ```
-
-   ```
-   CONFIG COM1 57600 8 n 0   
+   CONFIG COM1 57600 8 n 0   //不要忘了
    saveconfig
    ```
 
@@ -79,7 +77,11 @@
 
 ## 数据处理
 
-1. [GPS定位精度](https://blog.csdn.net/weixin_36553855/article/details/86997798)
+1. [调试软件RTKLIB](https://wiki.blicube.com/grtk/zh/RTK-lib/)
+
+   `rtkplot.exe`
+   
+2. [GPS定位精度](https://blog.csdn.net/weixin_36553855/article/details/86997798)
 
     水平精度以圆概率误差(CEP) 意味着 50% 的结果在给出的圆直径内，50%的结果在圆外。
 
@@ -91,7 +93,7 @@
 
     2.5M CEP -> 3M RMS -> 6M 2D RMS
 
-2. [格式详解](https://bbs.huaweicloud.com/blogs/313486)
+3. [格式详解](https://bbs.huaweicloud.com/blogs/313486)
 
     GPS NMEA采集到的经度和纬度格式分别是：
     纬度ddmm.mmmmm（度分）
@@ -102,11 +104,23 @@
 
     <div align=center>     <img src="https://pictures-kiana.oss-cn-beijing.aliyuncs.com/img/20230409165841.png" width = "600" alt="20230409165841"/>    </div>
 
-3. [gps_common](https://codeleading.com/article/94243225958/)
+   ```c
+   //转换后维度 = dd + (mm.mmmmm)/60
+   double convertDDMMToDegree(char *coordinate, int size)
+   {
+      char temp[4];
+      strncpy(temp, coordinate, size);
+      double preValue = atof(temp);               // 整数部分
+      double lastValue = atof(coordinate + size); // 小数部分
+      return preValue + lastValue / 60;
+   }    
+   ```
+
+4. [gps_common](https://codeleading.com/article/94243225958/)
 
     [wiki](https://github.com/swri-robotics/gps_umd/tree/ros2-devel)
 
-4. 注意事项
+5. 注意事项
 
     1. The master antenna, aka "ANT1", represents the location GRTK is positioning.
 
@@ -116,7 +130,7 @@
     
         ![](https://pictures-kiana.oss-cn-beijing.aliyuncs.com/img/202209261123847.png)
 
-5. GPS数据处理
+6. GPS数据处理
    
    1. [读取与写入](https://blog.csdn.net/y18771025420/article/details/105884911)
 
@@ -240,3 +254,10 @@
     注意：地球表面坐标 (x,y,z)，和($\phi$, $\lambda$, $h$)
 
     其中，$\phi$维度，$\lambda$经度
+
+
+## 代码实操
+
+1. 数据转换
+
+   
