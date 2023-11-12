@@ -22,7 +22,15 @@ tags:
 
    按F10可以选择启动设备
 
-3. 蓝牙键盘
+   拯救者 F2或者F12
+
+3. [双系统重装](https://blog.csdn.net/m0_37412775/article/details/126724484)
+
+   [unable to find a medium containing a live file system](https://blog.csdn.net/qq_28406091/article/details/105667254)在打开ubuntu安装界面前，走进度条时，快速把U盘拔出来再插进去，这样电脑就可以正确找到U盘并安装了。
+
+   [FireFox无法使用HTML5播放器](https://blog.csdn.net/qq_35544714/article/details/109265345)
+   
+4. 蓝牙键盘
 
    1. ubuntun系统下将蓝牙键盘与系统连接好
 
@@ -42,25 +50,27 @@ tags:
       参考链接：
       [win10 ubuntu16 双系统共用蓝牙鼠标](https://blog.csdn.net/10km/article/details/61201268?utm_medium=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromMachineLearnPai2%7Edefault-3.control&depth_1-utm_source=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromMachineLearnPai2%7Edefault-3.control)
    
-4. 启动项管理
+5. 启动项管理
 
    [Windows](https://blog.csdn.net/qq459080123/article/details/81392060)
    
-   [Ubuntun](https://blog.csdn.net/qq_27278957/article/details/100099169?spm=1001.2101.3001.6650.2&utm_medium=distribute.pc_relevant.none-task-blog-2%7Edefault%7ELandingCtr%7Edefault-2.queryctrv2&depth_1-utm_source=distribute.pc_relevant.none-task-blog-2%7Edefault%7ELandingCtr%7Edefault-2.queryctrv2&utm_relevant_index=5) `gnome-session-properties`
+   [Ubuntun](https://blog.csdn.net/qq_27278957/article/details/100099169) 
+   
+   `gnome-session-properties`
 
-5. 小技巧
+6. 小技巧
 
    [解决pip下载过慢的问题](https://blog.csdn.net/SampsonTse/article/details/103997667)
    
-6. ubuntun扩容
+7. ubuntun扩容
 
    [通过GParted](https://zhuanlan.zhihu.com/p/422981369)
 
    [Win10方案](https://www.diskgenius.cn/)
    
-7. [QQ、微信](https://www.cnblogs.com/voidint07/p/14097092.html)
+8. [QQ、微信](https://www.cnblogs.com/voidint07/p/14097092.html)
 
-8. c
+9.  c
 
    ```
    $ sudo apt-get install ros-noetic-rqt
@@ -123,10 +133,14 @@ sudo chmod -R 777 /usr/share/sangfor
 
 [安装](https://blog.csdn.net/qq_44339029/article/details/120579608?utm_source=app&app_version=4.16.0)
 
-## ROS 使用
+# ROS 使用
 ### 从零开始
 
+[安装](https://blog.csdn.net/PlutooRx/article/details/127558240)
+
 [教程参考-古月局ROS入门21讲](https://www.bilibili.com/video/BV1zt411G7Vn?from=search&seid=13971428836986102434&spm_id_from=333.337.0.0)
+
+<div align=center>     <img src="https://pictures-kiana.oss-cn-beijing.aliyuncs.com/img/202311081945224.png" width = "500" alt="202311081945224"/>    </div> 
 
 [代码参考--PCL_test](https://adamshan.blog.csdn.net/article/details/82901295)
 
