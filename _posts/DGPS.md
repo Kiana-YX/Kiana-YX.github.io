@@ -143,7 +143,10 @@
 
     int main()
     {
+        //以追加模式打开
         ofstream res("./gps.txt", std::ios::app);
+        //以覆盖模式打开
+        std::ofstream res("./gps.txt", std::ios::trunc);
         int i = 100;
 
         while (i--) {
